@@ -28,7 +28,6 @@ export function Seo({
   `)
 
   const {
-    siteTitle,
     siteTitleDefault,
     siteUrl,
     siteDescription,
@@ -45,7 +44,7 @@ export function Seo({
 
   return (
     <>
-      <title> {title ? `${title} | ${siteTitle}`: siteTitleDefault}</title>
+      <title>Test shopify site</title>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <meta property="og:title" content={seo.title} />

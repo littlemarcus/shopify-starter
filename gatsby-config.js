@@ -1,4 +1,6 @@
-require("dotenv").config()
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   siteMetadata: {
@@ -17,8 +19,8 @@ module.exports = {
     {
       resolve: "gatsby-source-shopify",
       options: {
-        password: "lukaol",
-        storeUrl: "https://sandboxington.myshopify.com",
+        password: process.env.SHOPIFY_SHOP_PASSWORD,
+        storeUrl: "sandboxington.myshopify.com",
         shopifyConnections: ["collections"],
       },
     },
